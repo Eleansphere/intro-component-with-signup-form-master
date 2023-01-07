@@ -17,9 +17,11 @@ body{
     font-family: 'Poppins', sans-serif;
     background: url('./images/bg-intro-desktop.png');
     background-color: var(--red);
+    margin: 0 auto;
 }
 main{
-    width: 60%;
+    width: 100%;
+    max-width: 940px;
 }
 .all-flex-center{
     display: flex;
@@ -28,8 +30,10 @@ main{
 }
 /* TEXT-SIDE-STYLING */
 .text-side{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
     color: white;
-    padding: 2rem;
 }
 .text-side h1{
     font-weight: 700;
@@ -39,16 +43,17 @@ main{
 }
 /* FORM-SIDE-STYLING */
 .form-side{
+    padding: 1.8rem;
 
 }
 .free-caption{
     background-color: var(--blue);
-    padding: 0.6rem 1rem;
+    padding: 0.8rem 1rem;
     text-align: center;
     color: var(--grayishBlue);
     border-radius: 0.4rem;
-    margin-bottom: 1rem;
-    box-shadow: 0px 6px 2px var(--darkBlue);
+    margin-bottom: 1.4rem;
+    box-shadow: 0px 8px 5px -2px var(--darkBlue);
     /* font-weight: 400; */
 }
 .free-caption span{
@@ -56,15 +61,18 @@ main{
     color: white;
 }
 .main-form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: max-content;
     background-color: white;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 0.4rem;
+    box-shadow: 0px 5px 5px -1px var(--darkBlue)
 }
 .main-form input{
-    width: 100%;
-    border: 1px solid black;
-    padding: 0.6rem 1rem;
-    margin: 0.8rem 0;
+    border: 2px solid var(--grayishBlue);
+    padding: 0.8rem 1rem;
     border-radius: 0.3rem;
     color: var(--grayishBlue);
     font-weight: 600;
@@ -75,7 +83,7 @@ main{
     width: 100%;
     background-color: var(--green);
     color: white;
-    padding: 0.6rem 1rem;
+    padding: 0.8rem 1rem;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -83,8 +91,6 @@ main{
     text-align: center;
     font-size:0.6rem;
     color: var(--grayishBlue);
-    margin-top: 1rem;
-
 }
 .disclaimer span{
     color: var(--red);
@@ -93,5 +99,8 @@ main{
 /* HOVERS */
 button:hover{
     opacity: 0.8;
+    cursor: pointer;
+}
+.disclaimer:hover{
     cursor: pointer;
 }
