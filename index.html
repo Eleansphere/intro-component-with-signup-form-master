@@ -33,22 +33,24 @@
             then$20/mo. thereafter
           </p>
         </div>
-        <form class="main-form">
+        <form class="main-form" action="#">
           <input
             class="input-field"
             type="text"
-            name=""
+            name="first-name"
             id="first-name"
             placeholder="First Name"
-            required
+            
           />
+          <img src="/images/icon-error.svg" alt="error" class="form-img" id="name-img">
+          <label for="first-name">Name cannot be empty</label>
           <input
             class="input-field"
             type="text"
             name=""
             id="last-name"
             placeholder="Last Name"
-            required
+            
           />
           <input
             class="input-field"
@@ -56,7 +58,7 @@
             name=""
             id="email-address"
             placeholder="Email Address"
-            required
+            
           />
           <input
             class="input-field"
@@ -64,7 +66,7 @@
             name=""
             id="password"
             placeholder="Password"
-            required
+            
           />
           <button type="submit" onclick="pushToServer()">
             Claim your free trial
