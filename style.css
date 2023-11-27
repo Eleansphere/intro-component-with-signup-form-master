@@ -6,11 +6,13 @@
     --darkBlue: hsl(249, 10%, 26%); 
     --grayishBlue: hsl(246, 25%, 77%);
 }
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body{
     max-width: 1440px;
     min-height: 100vh;
@@ -18,34 +20,39 @@ body{
     background: url('./images/bg-intro-desktop.png');
     background-color: var(--red);
     margin: 0 auto;
-}
-main{
-    width: 100%;
-    max-width: 940px;
-}
-.all-flex-center{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+main{
+    display: grid;
+    grid-template: 1fr/minmax(min-content, 550px) minmax(min-content, 550px) 
+}
+
 /* TEXT-SIDE-STYLING */
+
 .text-side{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     row-gap: 1.6rem;
     color: white;
+    padding: 1.4rem;
 }
+
 .text-side h1{
-    font-weight: 700;
-    font-size: 2.6rem;
-    line-height: 1;
-    padding-bottom: 1rem;
+    font-size: 3rem;
+    line-height: 1.2;
 }
+
 /* FORM-SIDE-STYLING */
+
 .form-side{
     padding: 1.8rem;
 
 }
+
 .free-caption{
     background-color: var(--blue);
     padding: 0.8rem 1rem;
@@ -54,29 +61,34 @@ main{
     border-radius: 0.4rem;
     margin-bottom: 1.4rem;
     box-shadow: 0px 8px 5px -2px var(--darkBlue);
-    /* font-weight: 400; */
+    font-size: .8rem;
 }
+
 .free-caption span{
     font-weight: 600;
     color: white;
 }
+
+/*FORM STYLING */
+
 .main-form{
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-    width: max-content;
     background-color: white;
     padding: 2rem;
     border-radius: 0.4rem;
     box-shadow: 0px 5px 5px -1px var(--darkBlue)
 }
+
 .main-form input{
     border: 2px solid var(--grayishBlue);
     padding: 0.8rem 1rem;
     border-radius: 0.3rem;
-    color: var(--grayishBlue);
     font-weight: 600;
+    width: 100%;
 }
+
 .main-form button{
     border: none;
     border-radius: 0.3rem;
@@ -87,20 +99,71 @@ main{
     font-weight: 600;
     text-transform: uppercase;
 }
+
+.input-wrapper{
+    position: relative;
+    text-align: right;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--red);
+}
+
 .disclaimer{
     text-align: center;
     font-size:0.6rem;
     color: var(--grayishBlue);
 }
+
 .disclaimer span{
     color: var(--red);
     font-weight: 700;
 }
+
+/*CLASSES FOR JS CHANGE – Default*/
+
+.form-label{
+    display: inline-block;
+    visibility: hidden;
+    margin-top: 0.3rem;
+    font-style: oblique;
+}
+
+.form-img{
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/*CLASSES FOR JS CHANGE – Show*/
+
+.form-label-show{
+    visibility: visible;
+}
+
+.form-img-show{
+    display: block;
+}
+
 /* HOVERS */
+
 button:hover{
     opacity: 0.8;
     cursor: pointer;
 }
+
 .disclaimer:hover{
     cursor: pointer;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 850px){
+    main{
+        grid-template: .6fr 1.4fr / 1fr;
+        padding: 2rem;
+    }
+    .text-side{
+        text-align: center;
+    }
 }
