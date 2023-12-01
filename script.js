@@ -2,11 +2,20 @@
 const imgErr = document.querySelectorAll('.form-img');
 const labelErr = document.querySelectorAll('label');
 const inputFields = document.querySelectorAll('.input-field');  
+const submitButton = document.getElementById("submitBtn");
 
 
 //Input validation
 
 let validate = false;
+
+
+submitButton.addEventListener("click", ()=>{
+      if(validate!==true){
+         submitButton.disabled = true;
+          alert("Fill the form!");
+      }
+ });
 
 inputFields.forEach((item, index)=>{
   item.addEventListener("focus", ()=>{
