@@ -30,7 +30,7 @@
             then$20/mo. thereafter
           </p>
         </div>
-        <form class="main-form">
+        <form action="/" class="main-form">
           <div class="input-wrapper">
             <input
               class="input-field"
@@ -38,6 +38,7 @@
               name="first-name"
               id="first-name"
               placeholder="First Name"
+              autocomplete="given-name"
             />
             <img
               src="images/icon-error.svg"
@@ -56,6 +57,7 @@
               name="last-name"
               id="last-name"
               placeholder="Last Name"
+              autocomplete="family-name"
             />
             <img
               src="images/icon-error.svg"
@@ -74,6 +76,7 @@
               name="email"
               id="email-address"
               placeholder="Email Address"
+              autocomplete="off"
             />
             <img
               src="images/icon-error.svg"
@@ -81,7 +84,7 @@
               class="form-img"
               id="email-img"
             />
-            <label for="email" class="form-label" id="label-email"
+            <label for="email-address" class="form-label" id="label-email"
               >Looks like this is not an email</label
             >
           </div>
@@ -103,7 +106,7 @@
               >Password cannot be empty</label
             >
           </div>
-          <button id="submitBtn">Claim your free trial</button>
+          <button type="submit">Claim your free trial</button>
           <p class="disclaimer">
             By clicking the button, you are agreeing to our
             <span>Terms and Services</span>
