@@ -17,12 +17,15 @@ mainForm.addEventListener("submit", event =>{
     }
     else{
       errorRemove(index);
+     
     }
   });
   
   if(ban === true){
-    inputFields.forEach(item =>{
+    inputFields.forEach((item, index) =>{
     console.log(`Your ${item.id} is: ${item.value}`);
+    successShow(index);
+    setTimeout(resetInputs, 4000);
     });
     
     }
@@ -31,7 +34,6 @@ mainForm.addEventListener("submit", event =>{
         if(item.value==="") errorShow(index);
       }); 
   }
-  setTimeout(resetInputs, 4000);
 });
 
 //Email input validation
@@ -60,11 +62,19 @@ function errorRemove(inputIndex){
   inputFields[inputIndex].classList.remove('input-outline-red');
 }
 
+//Success class
+
+function successShow(inputIndex){
+  inputFields[inputIndex].classList.add('input-outline-green');
+}
+
 //Resetting inputs
 
 function resetInputs(){
-  inputFields.forEach((item) =>{
+  inputFields.forEach((item, index) =>{
     item.value = "";
+    errorRemove(index);
   });
   console.log("Input values removed");
+  location.reload();
 }
