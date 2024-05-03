@@ -149,6 +149,10 @@ main{
 .input-outline-red{
     outline: 2px solid var(--red);
 }
+
+.input-outline-green{
+    outline: 2px solid var(--green);
+}
 /* HOVERS */
 
 button:hover{
