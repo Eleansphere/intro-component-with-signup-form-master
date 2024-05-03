@@ -76,4 +76,5 @@ function resetInputs(){
     errorRemove(index);
   });
   console.log("Input values removed");
+  location.reload();
 }
